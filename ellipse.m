@@ -12,7 +12,7 @@ classdef ellipse < handle
     
     methods
         %This is how you build an object. With this. as the syntax
-        function this = ellipse(x,y,xscale,yscale,c)
+        function this = ellipse(x,y,xscale,yscale,c,q)
             this.xc = x;
             this.yc = y;
             this.a = xscale;
