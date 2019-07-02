@@ -6,6 +6,8 @@ classdef ellipse < handle
         a
         b
         color
+        %Range of angles that we can set
+        qVector
     end
     
     methods
@@ -16,10 +18,11 @@ classdef ellipse < handle
             this.a = xscale;
             this.b = yscale;
             this.color = c;
+            this.qVector = q;
         end
         % This draws the ellipse
         function render(this)
-            t = [0:pi/500:2*pi];
+            t = this.qVector;
             x = this.xc + this.a*cos(t);
             y = this.yc + this.b*sin(t);
             plot(x,y,this.color,'LineWidth',2);

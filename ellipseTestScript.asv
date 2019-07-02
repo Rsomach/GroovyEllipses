@@ -7,3 +7,4 @@ prompt = {'Enter your favorite ellipse color! (You can only enter k,g,b,w,r,m, o
 colorInput = inputdlg(prompt);
 E = ellipse(2, 5, 1, 4, 'colorInp);
 E.render
+E = ellipse(2, 5, 1, 4,[0:pi/10:1.5*pi]);
